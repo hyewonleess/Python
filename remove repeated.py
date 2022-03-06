@@ -18,7 +18,7 @@ for i in mylist:
     if i not in newlist:
         newlist.append(i)
 
-print(f"time: {time.time()-start:.5f}")
+print(f"time: {time.time()-start:.8f}")
 # 소요시간: 0.00100초
 
 print(newlist)
@@ -27,13 +27,19 @@ print(newlist)
 
 ### (2) dictionary
 
+start = time.time()
 print(list(dict.fromkeys(mylist)))
 # output: [1, 3, 5, 6, 4, 2]
 
+print(f"time: {time.time()-start:.8f}")
+
+
 ### (3) sorted
 
+start = time.time()
 print(sorted(set(mylist), key = lambda x: mylist.index(x)))
 # output: [1, 3, 5, 6, 4, 2]
 
+print(f"time: {time.time()-start:.8f}")
 
 
